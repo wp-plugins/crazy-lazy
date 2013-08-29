@@ -43,7 +43,7 @@ Bilder-Platzhalter können via CSS dekoriert werden. Einige Beispiele:
 = Hinweise =
 
 * Berücksichtigt werden alle über die Mediathek eingebundene Bilder inkl. Beitragsbild.
-* Template `footer.php` muss den WordPress-Funktionsaufruf `wp_footer()` beinhalten.
+* Template `footer.php` muss den Funktionsaufruf `wp_footer()` beinhalten.
 * Es handelt sich um meine eigene Weiterentwicklung von [Unveil.js für WordPress](https://github.com/sergejmueller/unveil-wordpress-plugin).
 * Funktioniert mit jedem Caching-Plugin - auch mit [Cachify](http://cachify.de).
 
