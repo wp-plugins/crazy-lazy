@@ -5,7 +5,7 @@ Description: Lazy Load WordPress Plugin
 Author: Sergej M&uuml;ller
 Author URI: http://wpcoder.de
 Plugin URI: http://wordpress.org/plugins/crazy-lazy/
-Version: 0.0.5
+Version: 0.0.6
 */
 
 
@@ -117,16 +117,16 @@ final class CrazyLazy {
 	* Print lazy load scripts in footer
 	*
 	* @since   0.0.1
-	* @change  0.0.5
+	* @change  0.0.6
 	*/
 
 	public static function print_scripts()
 	{
-		/* Simulate nojQuery on Twenty Thirteen */
-		//wp_deregister_script('jquery');
+		/* Globals */
+		global $wp_scripts;
 
 		/* Check for jQuery */
-		if ( wp_script_is('jquery', 'registered') ) {
+		if ( ! empty($wp_scripts) && (bool)$wp_scripts->query('jquery') ) { /* hot fix for buggy wp_script_is() */
 			self::_print_jquery_lazyload();
 		} else {
 			self::_print_javascript_lazyload();
