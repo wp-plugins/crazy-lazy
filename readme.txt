@@ -25,7 +25,7 @@ Das Lazy Load Plugin ist simpel aufgebaut und benötigt keinerlei Einstellungen:
 
 = Formatierung =
 
-Bilder-Platzhalter können im CSS als solche gekennzeichnet bzw. markiert werden. Einige Beispiele:
+Bilder-Platzhalter können via CSS dekoriert werden. Einige Beispiele:
 `img[src*='data:image/gif;base64'] {
     border: 1px dashed #dbdbdb;
 }`
@@ -42,11 +42,10 @@ Bilder-Platzhalter können im CSS als solche gekennzeichnet bzw. markiert werden
 
 = Hinweise =
 
-* Berücksichtigt werden alle in Artikeln eingebundene Bilder inkl. Beitragsbild (Thumbnail).
-* Es werden Bilder berücksichtigt, die über die Mediathek eingefügt oder als Beitragsbild definiert sind.
-* Das Theme-Template ‘footer.php’ muss den WordPress-Funktionsaufruf ‘wp_footer()’ beinhalten.
-* Es handelt sich um meine eigene Weiterentwicklung von Unveil.js für WordPress.
-* Funktioniert mit jedem Caching-Plugin - auch mit [Cachify]().
+* Berücksichtigt werden alle über die Mediathek eingebundene Bilder inkl. Beitragsbild.
+* Das Template `footer.php` muss den WordPress-Funktionsaufruf `wp_footer()` beinhalten.
+* Es handelt sich um meine eigene Weiterentwicklung von [Unveil.js für WordPress](https://github.com/sergejmueller/unveil-wordpress-plugin).
+* Funktioniert mit jedem Caching-Plugin - auch mit [Cachify](http://cachify.de).
 
 
 = Unterstützung =
