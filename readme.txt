@@ -49,7 +49,7 @@ Bilder-Platzhalter können via CSS dekoriert werden. Einige Beispiele:
 
 
 = Unterstützung =
-* Per [Flattr](https://flattr.com/t/1323822)
+* Per [Flattr](https://flattr.com/t/1879247)
 * Per [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5RDDW9FEHGLG6)
 
 
