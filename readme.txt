@@ -74,3 +74,4 @@ Bilder-Platzhalter können via CSS dekoriert werden. Einige Beispiele:
 = 0.0.5 =
 * Fallback aus purem JavaScript
 * Umzug to WordPress.org
+* [Mehr auf Google+](https://plus.google.com/110569673423509816572/posts/SnhULufzrMF)
