@@ -5,7 +5,7 @@ Description: Lazy Load WordPress Plugin
 Author: Sergej M&uuml;ller
 Author URI: http://wpcoder.de
 Plugin URI: http://wordpress.org/plugins/crazy-lazy/
-Version: 0.0.6
+Version: 0.0.7
 */
 
 
@@ -83,7 +83,7 @@ final class CrazyLazy {
 	* Prepare content images for Crazy Lazy usage
 	*
 	* @since   0.0.1
-	* @change  0.0.5
+	* @change  0.0.7
 	*
 	* @param   string  $content  Original post content
 	* @param   string  $content  Modified post content
@@ -101,12 +101,12 @@ final class CrazyLazy {
 		/* Replace images */
 		return preg_replace(
 			array(
-				'#<img(.+?)((?:wp-image-|wp-post-image).+?)src=["\'](.+?)["\'](.*?)/>(?!</noscript>)#',
-				'#<img(.+?)src=["\'](.+?)["\'](.+?)((?:wp-image-|wp-post-image).+?)/>(?!</noscript>)#'
+				'#(<img class=["\'](.*?(?:wp-image-|wp-post-image).+?)["\'](.+?)src=["\'](.+?)["\'](.*?)(/?)>)#',
+				'#(<img src=["\'](.+?)["\'](.+?)class=["\'](.*?(?:wp-image-|wp-post-image).+?)["\'](.*?)(/?)>)#'
 			),
 			array(
-				'<img$1crazy_lazy $2src="' .$null. '" data-src="$3"$4style="display:none"/><noscript><img$1$2src="$3"$4/></noscript>',
-				'<img$1src="' .$null. '" data-src="$2"$3crazy_lazy $4style="display:none"/><noscript><img$1src="$2"$3$4/></noscript>'
+				'<img class="crazy_lazy ${2}" src="' .$null. '" ${3} data-src="${4}" ${5} style="display:none" ${6}><noscript>${1}</noscript>',
+				'<img src="' .$null. '" data-src="${2}" ${3} class="crazy_lazy ${4}" ${5} style="display:none" ${6}><noscript>${1}</noscript>'
 			),
 			$content
 		);

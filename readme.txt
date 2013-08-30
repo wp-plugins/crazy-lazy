@@ -71,6 +71,9 @@ Bilder-Platzhalter können via CSS dekoriert werden. Einige Beispiele:
 
 == Changelog ==
 
+= 0.0.7 =
+* Unterstützung weiterer Formate des img-Tags
+
 = 0.0.6 =
 * Hot Fix für fehlerhafte WordPress-Funktion `wp_script_is`
 
