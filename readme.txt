@@ -20,7 +20,7 @@ Lazy load images. Simple to use: Activate, done. Search engine and noscript user
 
 Durch die Nachlade-Technik lassen sich Ladezeiten verkürzen und der Traffic reduzieren.
 
-Das Lazy Load Plugin ist simpel aufgebaut und benötigt keinerlei Einstellungen: Aktivieren, läuft. Je nach Theme bzw. die jQuery-Nutzung verwendet *Crazy Lazy* wahlweise das [Unveil.js](https://github.com/luis-almeida/unveil) jQuery Plugin oder die JavaScript-native Bibliothek [lazyload.js](https://gist.github.com/miloplacencia/3931803).
+Das Lazy Load Plugin ist simpel aufgebaut und benötigt keinerlei Einstellungen: Aktivieren, läuft. Je nach Theme bzw. die jQuery-Nutzung verwendet *Crazy Lazy* wahlweise das modifizierte jQuery Plugin [Unveil.js](https://github.com/luis-almeida/unveil) oder die JavaScript-native Bibliothek [lazyload.js](https://gist.github.com/miloplacencia/3931803).
 
 
 = Formatierung =
@@ -70,6 +70,10 @@ Bilder-Platzhalter können via CSS dekoriert werden. Einige Beispiele:
 
 
 == Changelog ==
+
+= 0.0.8 =
+* Weiches Einblenden der Bilder (FadeIn)
+* Umschreibung der Unveil.js-Bibliothek
 
 = 0.0.7 =
 * Unterstützung weiterer Formate des img-Tags

@@ -5,7 +5,7 @@ Description: Lazy Load WordPress Plugin
 Author: Sergej M&uuml;ller
 Author URI: http://wpcoder.de
 Plugin URI: http://wordpress.org/plugins/crazy-lazy/
-Version: 0.0.7
+Version: 0.0.8
 */
 
 
