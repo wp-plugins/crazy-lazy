@@ -3,52 +3,63 @@
  * A very lightweight jQuery plugin to lazy load images
  * http://luis-almeida.github.com/unveil
  *
+ * Modified by Sergej Müller
+ * http://wpcoder.de
+ *
  * Licensed under the MIT license.
- * Copyright 2013 Luís Almeida
- * https://github.com/luis-almeida
  */
 
 ;(function($) {
-
-  $.fn.unveil = function(threshold) {
+    $.fn.unveil = function() {
 
     var $w = $(window),
-        th = threshold || 0,
-        retina = window.devicePixelRatio > 1,
-        attrib = retina? "data-src-retina" : "data-src",
         images = this,
         loaded,
         inview,
         source;
 
-    this.one("unveil", function() {
-      source = this.getAttribute(attrib);
-      source = source || this.getAttribute("data-src");
-      if (source) this.setAttribute("src", source);
-    });
+        this.one(
+            'unveil',
+            function() {
+                var $$ = $(this),
+                    source = $$.data('src');
 
-    function unveil() {
-      inview = images.filter(function() {
-        var $e = $(this),
-            wt = $w.scrollTop(),
-            wb = wt + $w.height(),
-            et = $e.offset().top,
-            eb = et + $e.height();
+                if ( source) {
+                    $$
+                    .css('opacity', 0)
+                    .attr('src', source)
+                    .animate(
+                        {
+                            'opacity': 1
+                        },
+                        200
+                    );
+                }
+            }
+        );
 
-        return eb >= wt - th && et <= wb + th;
-      });
+        function unveil() {
+            inview = images.filter(
+                function() {
+                    var $e = $(this),
+                    wt = $w.scrollTop(),
+                    wb = wt + $w.height(),
+                    et = $e.offset().top,
+                    eb = et + $e.height();
 
-      loaded = inview.trigger("unveil");
-      images = images.not(loaded);
-    }
+                    return eb >= wt && et <= wb;
+                }
+            );
 
-    $w.scroll(unveil);
-    $w.resize(unveil);
+            loaded = inview.trigger('unveil');
+            images = images.not(loaded);
+        }
 
-    unveil();
+        $w.scroll(unveil);
+        $w.resize(unveil);
 
-    return this;
+        unveil();
 
-  };
-
-})(window.jQuery || window.Zepto);
+        return this;
+    };
+})(window.jQuery);
