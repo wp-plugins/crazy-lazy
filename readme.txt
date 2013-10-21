@@ -73,7 +73,7 @@ Bilder-Platzhalter können via CSS dekoriert werden. Einige Beispiele:
 
 = 0.0.8 =
 * Weiches Einblenden der Bilder (FadeIn)
-* Umschreibung der Unveil.js-Bibliothek
+* Modifizierung der Unveil.js-Bibliothek
 
 = 0.0.7 =
 * Unterstützung weiterer Formate des img-Tags
