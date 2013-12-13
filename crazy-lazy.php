@@ -138,7 +138,7 @@ final class CrazyLazy {
 	* Call unveil lazy load jQuery plugin
 	*
 	* @since   0.0.5
-	* @change  0.0.5
+	* @change  0.0.9
 	*/
 
 	private static function _print_jquery_lazyload()
@@ -156,13 +156,6 @@ final class CrazyLazy {
 			array('jquery'),
 			'',
 			true
-		);
-
-		/* Touch script */
-		$wp_scripts->add_data(
-			'unveil.js',
-			'data',
-			'jQuery(document).ready(function(){ jQuery("img.crazy_lazy").show(0).unveil(); });'
 		);
 	}
 

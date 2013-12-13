@@ -63,3 +63,10 @@
         return this;
     };
 })(window.jQuery);
+
+
+jQuery(document).ready(
+    function(){
+        jQuery("img.crazy_lazy").show(0).unveil();
+    }
+);
