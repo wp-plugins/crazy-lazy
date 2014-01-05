@@ -22,7 +22,7 @@
             'unveil',
             function() {
                 var $$ = $(this),
-                    source = $$.data('src');
+                    source = $$.data('src') || $$.attr('data-src');
 
                 if ( source) {
                     $$
