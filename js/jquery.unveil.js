@@ -67,6 +67,6 @@
 
 jQuery(document).ready(
     function(){
-        jQuery("img.crazy_lazy").show(0).unveil();
+        jQuery("img.crazy_lazy").css('display', '').unveil();
     }
 );
