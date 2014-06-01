@@ -143,10 +143,6 @@ final class CrazyLazy {
 
 	private static function _print_jquery_lazyload()
 	{
-		/* Globals */
-		global $wp_scripts;
-
-		/* Register script */
 		wp_enqueue_script(
 			'unveil.js',
 			plugins_url(
