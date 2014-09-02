@@ -3,7 +3,7 @@ Contributors: sergej.mueller
 Tags: lazy, load, loading, performance, images
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5RDDW9FEHGLG6
 Requires at least: 3.6
-Tested up to: 3.9
+Tested up to: 4.0
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -48,6 +48,11 @@ Bilder-Platzhalter können via CSS dekoriert werden. Einige Beispiele:
 * Funktioniert mit jedem Caching-Plugin - auch mit [Cachify](http://cachify.de).
 
 
+= Speicherbelegung =
+* Im Backend: ~ 0,01 MB
+* Im Frontend: ~ 0,04 MB
+
+
 = Unterstützung =
 * Per [Flattr](https://flattr.com/t/1879247)
 * Per [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5RDDW9FEHGLG6)
@@ -70,6 +75,10 @@ Bilder-Platzhalter können via CSS dekoriert werden. Einige Beispiele:
 
 
 == Changelog ==
+
+= 0.0.9 =
+* Support zu WordPress 4.0
+* Lazy Loading für WordPress-Bildergalerien
 
 = 0.0.8 =
 * Weiches Einblenden der Bilder (FadeIn)
