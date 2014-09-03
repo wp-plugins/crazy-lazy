@@ -76,6 +76,9 @@ Bilder-Platzhalter können via CSS dekoriert werden. Einige Beispiele:
 
 == Changelog ==
 
+= 0.0.9.1 =
+* Support für WordPress-Bildergalerien entfernt, da einige Nutzer von Problemen berichtet haben
+
 = 0.0.9 =
 * Support zu WordPress 4.0
 * Lazy Loading für WordPress-Bildergalerien

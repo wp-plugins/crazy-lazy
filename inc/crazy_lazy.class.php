@@ -66,7 +66,7 @@ final class CrazyLazy {
     * Prepare content images for Crazy Lazy usage
     *
     * @since   0.0.1
-    * @change  0.0.9
+    * @change  0.0.9.1
     *
     * @param   string  $content  Original post content
     * @param   string  $content  Modified post content
@@ -74,7 +74,7 @@ final class CrazyLazy {
 
     public static function prepare_images($content) {
         /* No lazy images? */
-        if ( strpos($content, '-image') === false && strpos($content, 'attachment-') === false ) {
+        if ( strpos($content, '-image') === false ) {
             return $content;
         }
 
@@ -84,12 +84,12 @@ final class CrazyLazy {
         /* Replace images */
         return preg_replace(
             array(
-                '#(<img(.*?) class=["\'](.*?(?:wp-image-|wp-post-image|attachment-).+?)["\'](.+?)src=["\'](.+?)["\'](.*?)(/?)>)#',
-                '#(<img(.*?) src=["\'](.+?)["\'](.+?)class=["\'](.*?(?:wp-image-|wp-post-image|attachment-).+?)["\'](.*?)(/?)>)#'
+                '#(<img class=["\'](.*?(?:wp-image-|wp-post-image).+?)["\'](.+?)src=["\'](.+?)["\'](.*?)(/?)>)#',
+                '#(<img src=["\'](.+?)["\'](.+?)class=["\'](.*?(?:wp-image-|wp-post-image).+?)["\'](.*?)(/?)>)#'
             ),
             array(
-                '<img${2} class="crazy_lazy ${3}" src="' .$null. '" ${4} data-src="${5}" ${6} style="display:none" ${7}><noscript>${1}</noscript>',
-                '<img${2} src="' .$null. '" data-src="${3}" ${4} class="crazy_lazy ${5}" ${6} style="display:none" ${7}><noscript>${1}</noscript>'
+                '<img class="crazy_lazy ${2}" src="' .$null. '" ${3} data-src="${4}" ${5} style="display:none" ${6}><noscript>${1}</noscript>',
+                '<img src="' .$null. '" data-src="${2}" ${3} class="crazy_lazy ${4}" ${5} style="display:none" ${6}><noscript>${1}</noscript>'
             ),
             $content
         );

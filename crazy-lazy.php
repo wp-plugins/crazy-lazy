@@ -6,7 +6,7 @@ Author: Sergej M&uuml;ller
 Author URI: http://wpcoder.de
 Plugin URI: http://wordpress.org/plugins/crazy-lazy/
 License: GPLv2 or later
-Version: 0.0.9
+Version: 0.0.9.1
 */
 
 /*
