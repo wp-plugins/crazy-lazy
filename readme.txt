@@ -1,7 +1,7 @@
 === Crazy Lazy ===
 Contributors: sergej.mueller
 Tags: lazy, load, loading, performance, images
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5RDDW9FEHGLG6
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZAQUT9RLPW8QN
 Requires at least: 3.6
 Tested up to: 4.0
 Stable tag: trunk
@@ -55,7 +55,7 @@ Bilder-Platzhalter können via CSS dekoriert werden. Einige Beispiele:
 
 = Unterstützung =
 * Per [Flattr](https://flattr.com/t/1879247)
-* Per [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5RDDW9FEHGLG6)
+* Per [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZAQUT9RLPW8QN)
 
 
 = Autor =
